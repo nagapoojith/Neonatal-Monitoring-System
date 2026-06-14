@@ -1,0 +1,159 @@
+# ──────────────────────────────────────────────────────────
+#  NeoGuard — Root .gitignore
+#  Covers: ESP32 Arduino firmware + React/Node.js web app
+# ──────────────────────────────────────────────────────────
+
+
+# ══════════════════════════════
+#  Arduino / ESP32 Firmware
+# ══════════════════════════════
+
+# Arduino build output
+build/
+*.elf
+*.bin
+*.hex
+*.map
+
+# Arduino IDE cache and preferences
+.arduino15/
+*.ino.globals.h
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Credentials — NEVER commit these
+# If you hardcode WiFi/ThingSpeak keys, use a secrets header instead:
+#   secrets.h  /  credentials.h
+secrets.h
+credentials.h
+
+
+# ══════════════════════════════
+#  Node.js / Web Application
+# ══════════════════════════════
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build output
+dist/
+dist-ssr/
+
+# Vite
+*.local
+
+# dotenv — local environment files (never commit real secrets)
+.env
+.env.local
+.env.*.local
+# Keep the example template committed
+!.env.example
+
+
+# ══════════════════════════════
+#  Supabase
+# ══════════════════════════════
+
+# Supabase local dev (Docker volumes, temp files)
+supabase/.branches/
+supabase/.temp/
+
+
+# ══════════════════════════════
+#  Editors & IDEs
+# ══════════════════════════════
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+
+# JetBrains
+.idea/
+
+# Vim / Neovim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+
+# ══════════════════════════════
+#  Operating System
+# ══════════════════════════════
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+
+# ══════════════════════════════
+#  Logs & Temporary Files
+# ══════════════════════════════
+
+logs/
+*.log
+tmp/
+temp/
+.cache/
+
+
+# ══════════════════════════════
+#  Testing & Coverage
+# ══════════════════════════════
+
+coverage/
+.nyc_output/
+
+
+# ══════════════════════════════
+#  Miscellaneous
+# ══════════════════════════════
+
+# TypeScript incremental compilation
+*.tsbuildinfo
+
+# Optional npm cache
+.npm/
+
+# Optional REPL history
+.node_repl_history
+
+# Yarn integrity file
+.yarn-integrity
+
+.vscode/
+*.settings.json
+
+
+*.env
